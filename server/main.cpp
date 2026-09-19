@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
         configPath = argv[1];
     }
 
-    GameServer app(NULL, RunMode::SERVICE, 3519, std::wstring(configPath.begin(), configPath.end()));
+    GameServer app(NULL, RunMode::SERVICE, 3519, configPath);
     app.startConsole();
     return app.run();
 }

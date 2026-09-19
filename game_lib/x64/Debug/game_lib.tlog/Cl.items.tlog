@@ -1,0 +1,12 @@
+D:\Programming\EchoCrypt\game_lib\src\App.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\App.obj
+D:\Programming\EchoCrypt\game_lib\src\ConsoleManager.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\ConsoleManager.obj
+D:\Programming\EchoCrypt\game_lib\src\ControlIdManager.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\ControlIdManager.obj
+D:\Programming\EchoCrypt\game_lib\src\db\dbConnection.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\dbConnection.obj
+D:\Programming\EchoCrypt\game_lib\src\db\dbUtils.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\dbUtils.obj
+D:\Programming\EchoCrypt\game_lib\src\db\pgConnection.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\pgConnection.obj
+D:\Programming\EchoCrypt\game_lib\src\EventDispatcher.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\EventDispatcher.obj
+D:\Programming\EchoCrypt\game_lib\src\shell\CommandsHandlers.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\CommandsHandlers.obj
+D:\Programming\EchoCrypt\game_lib\src\shell\FunctionsHandlers.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\FunctionsHandlers.obj
+D:\Programming\EchoCrypt\game_lib\src\shell\vShell.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\vShell.obj
+D:\Programming\EchoCrypt\game_lib\src\shell\vShellEngine.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\vShellEngine.obj
+D:\Programming\EchoCrypt\game_lib\src\stringUtils.cpp;D:\Programming\EchoCrypt\game_lib\x64\Debug\stringUtils.obj

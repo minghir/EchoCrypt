@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{b9ac3da6-8f83-4ffe-b786-ca2874c46d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\network">
+      <UniqueIdentifier>{ca900dc2-301c-4862-a4e9-0408328b3941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\shell">
+      <UniqueIdentifier>{230ee00d-f3fc-4965-a741-e19d18c750e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\db">
+      <UniqueIdentifier>{88e11543-9e7d-4ee1-9fbe-f3c7dbf2c09e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ConfigLoader.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConsoleManager.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ControlIdManager.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventDispatcher.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stringUtils.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XmlCache.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\IShellEngine.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\vDummyEngine.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\vKeyWords.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\vShell.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\vShellCommandParser.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shell\vShellEngine.hpp">
+      <Filter>src\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\dbConnection.hpp">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\dbUtils.hpp">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\pgConnection.hpp">
+      <Filter>src\db</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ConsoleManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControlIdManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventDispatcher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stringUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shell\CommandsHandlers.cpp">
+      <Filter>src\shell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shell\FunctionsHandlers.cpp">
+      <Filter>src\shell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shell\vShell.cpp">
+      <Filter>src\shell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shell\vShellEngine.cpp">
+      <Filter>src\shell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\dbConnection.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\dbUtils.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\pgConnection.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

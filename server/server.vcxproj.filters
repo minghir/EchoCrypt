@@ -21,9 +21,18 @@
     <ClInclude Include="GameServer.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="NetworkServer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

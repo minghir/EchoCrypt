@@ -21,32 +21,32 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5cdf8983-59fb-4a46-b15a-5057e0ada3d7}</ProjectGuid>
-    <RootNamespace>server</RootNamespace>
+    <ProjectGuid>{5015d4d8-d311-450a-a8cc-3e91eafb21b2}</ProjectGuid>
+    <RootNamespace>gamelib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -77,17 +77,18 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;../game_lib/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>game_lib.lib;libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\lib;$(SolutionDir)lib\</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)lib\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -98,17 +99,18 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;../game_lib/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>game_lib.lib;libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\lib;$(SolutionDir)lib\</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)lib\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -117,17 +119,18 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;../game_lib/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>game_lib.lib;libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\lib;$(SolutionDir)lib\</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)lib\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -138,27 +141,50 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;../game_lib/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>game_lib.lib;libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\linuxport\postgresql-17.2-3-windows-x64\pgsql\lib;$(SolutionDir)lib\</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+    <PostBuildEvent>
+      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)lib\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="GameEngine.hpp" />
-    <ClInclude Include="GameServer.hpp" />
-    <ClInclude Include="NetworkServer.hpp" />
+    <ClInclude Include="src\App.hpp" />
+    <ClInclude Include="src\ConfigLoader.hpp" />
+    <ClInclude Include="src\ConsoleManager.hpp" />
+    <ClInclude Include="src\ControlIdManager.hpp" />
+    <ClInclude Include="src\db\dbConnection.hpp" />
+    <ClInclude Include="src\db\dbUtils.hpp" />
+    <ClInclude Include="src\db\pgConnection.hpp" />
+    <ClInclude Include="src\EventDispatcher.hpp" />
+    <ClInclude Include="src\shell\IShellEngine.hpp" />
+    <ClInclude Include="src\shell\vDummyEngine.hpp" />
+    <ClInclude Include="src\shell\vKeyWords.hpp" />
+    <ClInclude Include="src\shell\vShell.hpp" />
+    <ClInclude Include="src\shell\vShellCommandParser.hpp" />
+    <ClInclude Include="src\shell\vShellEngine.hpp" />
+    <ClInclude Include="src\stringUtils.hpp" />
+    <ClInclude Include="src\XmlCache.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameEngine.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="NetworkServer.cpp" />
+    <ClCompile Include="src\App.cpp" />
+    <ClCompile Include="src\ConsoleManager.cpp" />
+    <ClCompile Include="src\ControlIdManager.cpp" />
+    <ClCompile Include="src\db\dbConnection.cpp" />
+    <ClCompile Include="src\db\dbUtils.cpp" />
+    <ClCompile Include="src\db\pgConnection.cpp" />
+    <ClCompile Include="src\EventDispatcher.cpp" />
+    <ClCompile Include="src\shell\CommandsHandlers.cpp" />
+    <ClCompile Include="src\shell\FunctionsHandlers.cpp" />
+    <ClCompile Include="src\shell\vShell.cpp" />
+    <ClCompile Include="src\shell\vShellEngine.cpp" />
+    <ClCompile Include="src\stringUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
