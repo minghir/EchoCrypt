@@ -1,0 +1,154 @@
+EchoCrypt – TODO List
+1. Project Setup
+Create GitHub repository: EchoCrypt
+
+Add initial folder structure:
+
+server/
+
+client/
+
+db/
+
+docs/
+
+Add .gitignore for C++ and build artifacts
+
+Add minimal README.md
+
+2. Core Architecture & Documentation
+Write high-level architecture overview in docs/architecture.md
+
+Create design documents:
+
+docs/server.md — turn-based loop, networking model
+
+docs/world.md — dungeon generation, room tags
+
+docs/ai.md — AI Game Master responsibilities
+
+docs/audio.md — audio event model
+
+3. Database Layer (PostgreSQL)
+Design database schema:
+
+rooms, room_tags, dungeon_instances
+
+items, item_templates
+
+monsters, monster_templates
+
+player_profiles, inventory
+
+lore, ai_generated_events
+
+Create db/schema.sql
+
+Add initial seeds in db/seeds.sql
+
+Implement DB access module in server/db/
+
+4. Redis Integration (Runtime State)
+Define Redis key structure:
+
+player:<id>:state
+
+monster:<id>:state
+
+dungeon:<instance_id>:map
+
+events:<instance_id>
+
+pub/sub channels
+
+Implement Redis client wrapper in server/redis/
+
+Add functions for:
+
+loading dungeon instance into Redis
+
+reading/writing player & monster state
+
+pushing events and publishing updates
+
+5. Turn-Based Server Core
+Implement main turn loop:
+
+receive actions → validate → update → AI → broadcast
+
+Define action model:
+
+move, wait, attack, use, interact
+
+Implement basic combat & movement rules
+
+Add networking layer (WebSockets or TCP)
+
+6. ASCII Client Basics
+Implement ASCII renderer in client/ascii/
+
+Create text log module in client/narrative/
+
+Implement minimal protocol:
+
+server → map + entities + text + audio tags
+
+client → actions
+
+Build simple CLI client
+
+7. Narrative System (Non-AI First)
+Define room tags (damp, cursed, windy, ancient, etc.)
+
+Create narrative templates
+
+Implement procedural description generator
+
+Integrate narrative output into server events
+
+8. Audio Event Model
+Define audio tags:
+
+ambient: cold_echo, water_drip
+
+effects: door_creak, trap_trigger
+
+Add audio tags to server messages
+
+Implement audio playback module in client (SDL2 or WebAudio)
+
+9. AI Game Master (Phase 1)
+Define AI inputs:
+
+room state, player actions, monster states, history
+
+Define AI outputs:
+
+narrative text, audio tags, special events
+
+Implement simple rule-based AI
+
+Integrate AI into turn loop
+
+10. Multiplayer Support
+Add multi-player state handling in Redis
+
+Implement turn order or soft-sync model
+
+Broadcast updates to all players in the same dungeon instance
+
+11. Localization / Multi-Language Support
+Abstract narrative strings into resource files (JSON/YAML)
+
+Add language selection per player
+
+Ensure narrative generator supports multiple languages
+
+12. Polish & Tooling
+Add logging for server, AI, DB, Redis
+
+Add basic tests (dungeon generation, DB schema, Redis state)
+
+Add build scripts (CMake)
+
+Update README with build/run instructions

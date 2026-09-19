@@ -1,0 +1,174 @@
+EchoCrypt – Project Roadmap
+Phase 1 — Foundation (Week 1–2)
+Goal: Establish the core structure, architecture, and development environment.
+
+Set up GitHub repository (EchoCrypt)
+
+Add initial folder structure (server/, client/, db/, docs/)
+
+Write minimal README.md and TODO.md
+
+Draft architecture documents:
+
+Server architecture (turn-based loop)
+
+World generation model
+
+AI Game Master concept
+
+Audio event system
+
+Choose tech stack versions (C++, Redis, PostgreSQL, SDL2/WebAudio)
+
+Set up build system (CMake)
+
+Create basic logging framework
+
+Phase 2 — Database & Runtime State (Week 2–4)
+Goal: Build the persistent and runtime data layers.
+
+PostgreSQL (Persistence)
+Implement schema: rooms, items, monsters, dungeon instances, players
+
+Add seed data for dungeon templates
+
+Implement DB access layer in server
+
+Redis (Runtime)
+Define Redis key structure for:
+
+player state
+
+monster state
+
+dungeon instance
+
+event queues
+
+pub/sub channels
+
+Implement Redis client wrapper
+
+Add caching for room metadata and narrative templates
+
+Phase 3 — Core Server Engine (Week 4–6)
+Goal: Build the authoritative turn-based engine.
+
+Implement turn loop:
+
+receive → validate → update → AI → broadcast
+
+Define action model (move, wait, attack, interact)
+
+Implement basic combat and movement
+
+Add networking layer (WebSockets or TCP)
+
+Integrate Redis state updates
+
+Add basic error handling and logging
+
+Phase 4 — ASCII Client & Protocol (Week 6–8)
+Goal: Create a playable terminal client.
+
+Implement ASCII renderer (map + entities)
+
+Implement narrative text log
+
+Implement audio playback module (SDL2 or WebAudio)
+
+Define client-server protocol (JSON messages)
+
+Build minimal CLI client:
+
+shows map
+
+shows text
+
+plays audio
+
+sends actions
+
+Phase 5 — Narrative System (Week 8–10)
+Goal: Make the dungeon feel alive.
+
+Define room tags (damp, cursed, windy, ancient, etc.)
+
+Create narrative templates
+
+Implement procedural description generator
+
+Integrate narrative output into server events
+
+Add audio tags to narrative events
+
+Phase 6 — AI Game Master (Week 10–14)
+Goal: Introduce dynamic storytelling and reactive gameplay.
+
+Define AI inputs (room state, player actions, monster states)
+
+Define AI outputs (text, audio tags, events)
+
+Implement rule-based AI (Phase 1)
+
+Add event generation (traps, spawns, lore drops)
+
+Integrate AI into turn loop
+
+Save AI-generated lore into PostgreSQL
+
+Phase 7 — Multiplayer (Week 14–16)
+Goal: Enable cooperative or competitive dungeon crawling.
+
+Add multi-player state handling in Redis
+
+Implement turn synchronization model
+
+Broadcast updates to all players
+
+Add player join/leave events
+
+Add basic anti-cheat validation
+
+Phase 8 — Localization (Week 16–18)
+Goal: Make EchoCrypt playable in multiple languages.
+
+Abstract narrative strings into resource files (JSON/YAML)
+
+Add language selection per player
+
+Ensure narrative generator supports multiple languages
+
+Add English + Romanian as initial languages
+
+Phase 9 — Polish & Release Prep (Week 18–20)
+Goal: Prepare for first public release.
+
+Add logging improvements
+
+Add basic unit tests (world gen, DB, Redis)
+
+Optimize ASCII rendering
+
+Improve audio layering
+
+Write full README with build/run instructions
+
+Create docs/roadmap.md and docs/design.md
+
+Tag v0.1.0 — Playable Prototype
+
+Phase 10 — Future Enhancements (Post‑release)
+Goal: Expand EchoCrypt beyond the prototype.
+
+AI Game Master (Phase 2: ML-based narrative)
+
+Advanced audio system (reverb, spatial sound)
+
+More dungeon biomes
+
+More monster behaviors
+
+Web client version
+
+Steam release packaging
