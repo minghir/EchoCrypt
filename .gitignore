@@ -68,3 +68,5 @@ vcpkg_installed/
 Testing/
 .cache/
 /.vs
+/server/.vs/server.slnx/v18
+/server/x64/Debug
